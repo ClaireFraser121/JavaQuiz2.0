@@ -20,6 +20,8 @@ const questionsContainer = document.getElementById('questions');
 const choicesContainer = document.getElementById('choices');
 const feedbackElement = document.getElementById('feedback');
 const submitButton = document.getElementById('submit');
+const endScreen = document.getElementById('end-screen');
+
 
 
 // Start Quiz Function
@@ -54,6 +56,7 @@ function displayQuestion(questionIndex) {
     choicesContainer.appendChild(choiceButton);
   });
 }
+
 
 //   Check Answer Function
 //  a function to check if the user's selected answer is correct. Compare the selected answer with the correct answer from the current question object. Update the score and provide feedback to the user.
