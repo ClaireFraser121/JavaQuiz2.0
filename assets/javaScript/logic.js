@@ -108,3 +108,7 @@ function submitScore() {
     // Handle your high scores logic here
   }
   
+//   Event Listeners
+// event listeners for the "Start Quiz" button, answer choices, and the submit button for initials and score.
+startButton.addEventListener('click', startQuiz);
+submitButton.addEventListener('click', submitScore);
