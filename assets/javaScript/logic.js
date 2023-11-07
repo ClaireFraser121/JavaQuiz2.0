@@ -100,3 +100,11 @@ function startQuiz() {
     finalScoreElement.textContent = score;
   }
    
+//   Submit Score Function
+// a function to handle the submission of initials and scores
+function submitScore() {
+    const initials = document.getElementById('initials').value;
+    // Save the initials and score, e.g., to local storage
+    // Handle your high scores logic here
+  }
+  
