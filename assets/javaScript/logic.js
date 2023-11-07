@@ -45,3 +45,27 @@ function startQuiz() {
     });
   }
   
+  function checkAnswer(event) {
+    const selectedAnswer = event.target.textContent;
+    const currentQuestion = quizQuestions[currentQuestionIndex];
+  
+    if (selectedAnswer === currentQuestion.correctAnswer) {
+      // Correct answer
+      feedbackElement.textContent = 'Correct!';
+      score += 10; // Adjust the score as needed
+    } else {
+      // Incorrect answer, penalize time
+      feedbackElement.textContent = 'Incorrect!';
+      timeLeft -= 10; // Adjust the time penalty as needed
+    }
+  
+    // Move to the next question
+    currentQuestionIndex++;
+    if (currentQuestionIndex < quizQuestions.length) {
+      displayQuestion(currentQuestionIndex);
+    } else {
+      // Quiz is over
+      endQuiz();
+    }
+  }
+  
