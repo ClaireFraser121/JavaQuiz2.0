@@ -120,3 +120,21 @@ function submitScore() {
 // event listeners for the "Start Quiz" button, answer choices, and the submit button for initials and score.
 startButton.addEventListener('click', startQuiz);
 submitButton.addEventListener('click', submitScore);
+
+// Store High Scores in Local Storage
+// a function to store high scores in local storage.
+function saveHighScore(initials, score) {
+  const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
+
+  const newScore = { initials, score };
+  highScores.push(newScore);
+
+  // Sort high scores by score value (descending order)
+  highScores.sort((a, b) => b.score - a.score);
+
+  // Save the high scores back to local storage
+  localStorage.setItem('highScores', JSON.stringify(highScores));
+}
+
+
+
