@@ -6,16 +6,20 @@
 // Event listeners for buttons like "Start Quiz" and "Submit."
 
 // Global variables
+// Define global variables to keep track of the current question, the timer, and the user's score.
 let currentQuestionIndex = 0;
 let timeLeft = 0;
 let score = 0;
 
 // DOM elements
+// variables to store references to DOM elements that you will manipulate.
 const startButton = document.getElementById('start');
 const questionTitle = document.getElementById('question-title');
 const choicesContainer = document.getElementById('choices');
 const feedbackElement = document.getElementById('feedback');
 
+// Start Quiz Function
+// Implement a function to start the quiz when the "Start Quiz" button is clicked. This function should initialize the timer, display the first question, and hide the start screen.
 function startQuiz() {
     // Initialize timer and display the first question
     timeLeft = 60; // Set your desired initial time
@@ -29,6 +33,8 @@ function startQuiz() {
     startTimer();
   }
   
+//   Display Question Function
+// a function to display a question and its answer choices. Update the HTML content of the question and choices based on the current question index
   function displayQuestion(questionIndex) {
     const currentQuestion = quizQuestions[questionIndex];
     questionTitle.textContent = currentQuestion.question;
@@ -45,6 +51,8 @@ function startQuiz() {
     });
   }
   
+//   Check Answer Function
+//  a function to check if the user's selected answer is correct. Compare the selected answer with the correct answer from the current question object. Update the score and provide feedback to the user.
   function checkAnswer(event) {
     const selectedAnswer = event.target.textContent;
     const currentQuestion = quizQuestions[currentQuestionIndex];
@@ -69,6 +77,8 @@ function startQuiz() {
     }
   }
   
+//   Timer Functionality
+// a function to start the timer and update the timer display. Use setInterval to decrement the time and check if the timer reaches zero.
   function startTimer() {
     const timerElement = document.getElementById('time');
     const timerInterval = setInterval(function () {
@@ -81,3 +91,12 @@ function startQuiz() {
     }, 1000);
   }
   
+//   End Quiz Function
+// a function to handle the end of the quiz. Display the user's score and allow them to enter their initials and submit their score.
+  function endQuiz() {
+    // Hide questions, display end screen
+    questionsContainer.style.display = 'none';
+    endScreen.style.display = 'block';
+    finalScoreElement.textContent = score;
+  }
+   
