@@ -21,6 +21,8 @@ const choicesContainer = document.getElementById('choices');
 const feedbackElement = document.getElementById('feedback');
 const submitButton = document.getElementById('submit');
 const endScreen = document.getElementById('end-screen');
+const finalScoreElement = document.getElementById('final-score');
+
 
 
 
