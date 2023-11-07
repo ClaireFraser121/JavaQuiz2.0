@@ -112,11 +112,16 @@ function endQuiz() {
 
 //   Submit Score Function
 // a function to handle the submission of initials and scores
+
 function submitScore() {
   const initials = document.getElementById('initials').value;
-  // Save the initials and score, e.g., to local storage
-  // Handle your high scores logic here
+  
+  if (initials) {
+    saveHighScore(initials, score);
+    displayHighScores(); // Update displayed high scores
+  }
 }
+
 
 //   Event Listeners
 // event listeners for the "Start Quiz" button, answer choices, and the submit button for initials and score.
