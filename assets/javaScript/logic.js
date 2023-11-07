@@ -16,3 +16,16 @@ const questionTitle = document.getElementById('question-title');
 const choicesContainer = document.getElementById('choices');
 const feedbackElement = document.getElementById('feedback');
 
+function startQuiz() {
+    // Initialize timer and display the first question
+    timeLeft = 60; // Set your desired initial time
+    displayQuestion(currentQuestionIndex);
+  
+    // Hide the start screen and show the questions
+    startScreen.style.display = 'none';
+    questionsContainer.style.display = 'block';
+  
+    // Start the timer countdown
+    startTimer();
+  }
+  
