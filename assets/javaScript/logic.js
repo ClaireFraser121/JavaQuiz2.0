@@ -69,3 +69,15 @@ function startQuiz() {
     }
   }
   
+  function startTimer() {
+    const timerElement = document.getElementById('time');
+    const timerInterval = setInterval(function () {
+      timerElement.textContent = timeLeft;
+      if (timeLeft <= 0) {
+        clearInterval(timerInterval); // Stop the timer
+        endQuiz();
+      }
+      timeLeft--;
+    }, 1000);
+  }
+  
