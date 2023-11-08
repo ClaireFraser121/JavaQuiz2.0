@@ -22,7 +22,8 @@ const feedbackElement = document.getElementById('feedback');
 const submitButton = document.getElementById('submit');
 const endScreen = document.getElementById('end-screen');
 const finalScoreElement = document.getElementById('final-score');
-
+const correctSound = document.getElementById('correctSound');
+const incorrectSound = document.getElementById('incorrectSound');
 
 
 
@@ -68,12 +69,18 @@ function checkAnswer(event) {
 
   if (selectedAnswer === currentQuestion.choices[currentQuestion.correctAnswer]) {
     // Correct answer
-    feedbackElement.textContent = 'Correct!';
-    score += 10; // Adjust the score as needed
+    feedbackElement.textContent = 'Correct!'; // Display correct feedback
+    feedbackElement.classList.remove('incorrect'); // Remove the "incorrect" class
+    feedbackElement.classList.add('correct'); // Add the "correct" class for styling
+    score += 10;
+    playCorrectSound(); // Play the correct sound
   } else {
     // Incorrect answer, penalize time
-    feedbackElement.textContent = 'Incorrect!';
-    timeLeft -= 10; // Adjust the time penalty as needed
+    feedbackElement.textContent = 'Incorrect!'; // Display incorrect feedback
+    feedbackElement.classList.remove('correct'); // Remove the "correct" class
+    feedbackElement.classList.add('incorrect'); // Add the "incorrect" class for styling
+    timeLeft -= 10;
+    playIncorrectSound(); // Play the incorrect sound
   }
 
   // Move to the next question
@@ -149,6 +156,7 @@ function checkAnswer(event) {
     timeLeft -= 10;
     playIncorrectSound(); // Play the incorrect sound
   }
+  console.log('correctSound')
 
   // Move to the next question
   currentQuestionIndex++;
@@ -180,6 +188,7 @@ function saveHighScore(initials, score) {
   // Save the high scores back to local storage
   localStorage.setItem('highScores', JSON.stringify(highScores));
 }
+
 
 
 
