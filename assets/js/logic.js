@@ -112,13 +112,51 @@ function endQuiz() {
 
 //   Submit Score Function
 // a function to handle the submission of initials and scores
-
 function submitScore() {
   const initials = document.getElementById('initials').value;
-  
+
   if (initials) {
     saveHighScore(initials, score);
     displayHighScores(); // Update displayed high scores
+  }
+}
+
+// Function to play the correct sound
+function playCorrectSound() {
+  const audio = document.getElementById('correctSound');
+  audio.play();
+}
+
+// Function to play the incorrect sound
+function playIncorrectSound() {
+  const audio = document.getElementById('incorrectSound');
+  audio.play();
+}
+
+// Check Answer Function (Updated with sound effects)
+function checkAnswer(event) {
+  const selectedAnswer = event.target.textContent;
+  const currentQuestion = quizQuestions[currentQuestionIndex];
+
+  if (selectedAnswer === currentQuestion.choices[currentQuestion.correctAnswer]) {
+    // Correct answer
+    feedbackElement.textContent = 'Correct!';
+    score += 10;
+    playCorrectSound(); // Play the correct sound
+  } else {
+    // Incorrect answer, penalize time
+    feedbackElement.textContent = 'Incorrect!';
+    timeLeft -= 10;
+    playIncorrectSound(); // Play the incorrect sound
+  }
+
+  // Move to the next question
+  currentQuestionIndex++;
+  if (currentQuestionIndex < quizQuestions.length) {
+    displayQuestion(currentQuestionIndex);
+  } else {
+    // Quiz is over
+    endQuiz();
   }
 }
 
