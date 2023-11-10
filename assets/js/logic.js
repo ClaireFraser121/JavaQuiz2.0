@@ -126,6 +126,9 @@ function submitScore() {
     saveHighScore(initials, score);
     displayHighScores(); // Update displayed high scores
   }
+
+  // Redirect to the highscore page
+  window.location.href = 'highscores.html';
 }
 
 // Function to play the correct sound
