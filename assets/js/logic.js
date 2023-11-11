@@ -122,14 +122,19 @@ function endQuiz() {
 function submitScore() {
   const initials = document.getElementById('initials').value;
 
+  console.log('Initials:', initials);
+
   if (initials) {
     saveHighScore(initials, score);
-    displayHighScores(); // Update displayed high scores
-  }
+    displayHighScores();
+    console.log('High score saved and displayed');
 
-  // Redirect to the highscore page
-  window.location.href = 'highscores.html';
+    // Redirect to the highscore page
+    window.location.href = 'highscores.html';
+    console.log('Redirecting to highscores.html');
+  }
 }
+
 
 // Function to play the correct sound
 function playCorrectSound() {
@@ -175,7 +180,11 @@ function checkAnswer(event) {
 //   Event Listeners
 // event listeners for the "Start Quiz" button, answer choices, and the submit button for initials and score.
 startButton.addEventListener('click', startQuiz);
-submitButton.addEventListener('click', submitScore);
+submitButton.addEventListener('click', function (event) {
+  event.preventDefault();
+  submitScore();
+  window.location.assign("highscores.html")
+})
 
 // Store High Scores in Local Storage
 // a function to store high scores in local storage.
