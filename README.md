@@ -8,6 +8,7 @@ As a coding boot camp student, I was tasked with building a timed coding quiz wi
 
 - [Features](#features)
 - [Project Structure](#project-structure)
+- [Quiz Logic](#quiz-logic)
 - [Development Process](#development-process)
   - [Setting Up the Project](#setting-up-the-project)
   - [Building the Quiz Logic](#building-the-quiz-logic)
@@ -36,10 +37,28 @@ As a coding boot camp student, I was tasked with building a timed coding quiz wi
 
 The project is structured as follows:
 
-- index.html: The main HTML file containing the structure of the quiz and linking to CSS and JavaScript files.
-- assets: Directory containing subdirectories for CSS, JavaScript, sound effects, and any additional assets.
-- questions.js: JavaScript file containing an array of quiz questions.
-- logic.js: The main JavaScript file containing the quiz logic, event listeners, and functions for high scores.
+- **`index.html`**: The main HTML file containing the structure of the quiz and linking to CSS and JavaScript files.
+- **`assets`**: Directory containing subdirectories for CSS, JavaScript, sound effects, and any additional assets.
+- **`questions.js`**: JavaScript file containing an array of quiz questions.
+- **`logic.js`**: The main JavaScript file containing the quiz logic, event listeners, and functions for high scores.
+
+![Project Structure](/path/to/project-structure-screenshot.png)
+
+## Quiz Logic
+
+The quiz logic involves the following components:
+
+- **Starting the Quiz**: The `startQuiz` function initializes the timer, displays the first question, and hides the start screen.
+
+- **Displaying Questions**: The `displayQuestion` function updates the HTML content based on the current question index.
+
+- **Checking Answers**: The `checkAnswer` function compares the selected answer with the correct answer, updates the score, and provides feedback.
+
+- **Timer Functionality**: The `startTimer` function decrements the time and updates the display. The quiz ends when the timer reaches zero.
+
+- **Ending the Quiz**: The `endQuiz` function hides the questions, displays the final score, and allows users to submit their initials.
+
+![Quiz Logic](/path/to/quiz-logic-screenshot.png)
 
 ## Development Process
 
