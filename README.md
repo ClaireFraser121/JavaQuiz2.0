@@ -43,7 +43,7 @@ To make the most of the quiz application, follow these steps:
    - Open a terminal or command prompt and change into the project directory:
 
      ```bash
-     cd quiz-project
+     cd javaQuiz2.0
      ```
 
 3. **Open the Quiz:**
