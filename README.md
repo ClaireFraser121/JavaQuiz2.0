@@ -9,6 +9,9 @@ As a coding boot camp student, I was tasked with building a timed coding quiz wi
 - [Features](#features)
 - [Project Structure](#project-structure)
 - [Quiz Logic](#quiz-logic)
+- [API Integration](#api-integration)
+- [Local Storage](#local-storage)
+- [Sound Effects](#sound-effects)
 - [Development Process](#development-process)
   - [Setting Up the Project](#setting-up-the-project)
   - [Building the Quiz Logic](#building-the-quiz-logic)
@@ -52,13 +55,31 @@ The quiz logic involves the following components:
 
 - **Displaying Questions**: The `displayQuestion` function updates the HTML content based on the current question index.
 
-- **Checking Answers**: The `checkAnswer` function compares the selected answer with the correct answer, updates the score, and provides feedback.
+- **Checking Answers**: The `checkAnswer` function compares the selected answer with the correct answer, updates the score, and provides feedback. With a correct or incorrect buzzer sound
 
 - **Timer Functionality**: The `startTimer` function decrements the time and updates the display. The quiz ends when the timer reaches zero.
 
 - **Ending the Quiz**: The `endQuiz` function hides the questions, displays the final score, and allows users to submit their initials.
 
 ![Quiz Logic](/path/to/quiz-logic-screenshot.png)
+
+## API Integration
+
+The project does not currently integrate any external APIs. However, you can extend it by fetching questions from an API for a more dynamic quiz experience.
+
+![API Integration](/path/to/api-integration-screenshot.png)
+
+## Local Storage
+
+Local storage is used to store and retrieve high scores. The `saveHighScore` function saves scores to local storage, and the `displayHighScores` function retrieves and displays them.
+
+![Local Storage](/path/to/local-storage-screenshot.png)
+
+## Sound Effects
+
+The project includes sound effects for correct and incorrect answers. The `playCorrectSound` and `playIncorrectSound` functions play audio when the user responds to a question.
+
+![Sound Effects](/path/to/sound-effects-screenshot.png)
 
 ## Development Process
 
@@ -107,6 +128,11 @@ Local storage was used to save and retrieve high scores. The user's initials and
 **Issue:** ReferenceError for an undefined function (`displayHighScores`).
 
 **Solution:** I ensured that the function was defined before being called. Placing the script tag for `logic.js` after the necessary HTML elements helped resolve this issue.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
 
 ## Conclusion
 
