@@ -34,7 +34,7 @@ To make the most of the quiz application, follow these steps:
    - Clone this repository to your local machine using the following command:
 
      ```bash
-     git clone https://github.com/your-username/quiz-project.git
+     git clone https://git@github.com:ClaireFraser121/JavaQuiz2.0.git
      ```
 
    - Alternatively, download the ZIP file and extract its contents.
