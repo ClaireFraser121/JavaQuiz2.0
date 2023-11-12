@@ -6,6 +6,7 @@ As a coding boot camp student, I was tasked with building a timed coding quiz wi
 
 ## Table of Contents
 
+- [Usage](#usage)
 - [Features](#features)
 - [Project Structure](#project-structure)
 - [Quiz Logic](#quiz-logic)
@@ -25,6 +26,55 @@ As a coding boot camp student, I was tasked with building a timed coding quiz wi
   - [Challenge 4: Undefined Function](#challenge-4-undefined-function)
 
 - [Conclusion](#conclusion)
+
+## Usage
+
+To make the most of the quiz application, follow these steps:
+
+1. **Clone the Repository:**
+   - Clone this repository to your local machine using the following command:
+
+     ```bash
+     git clone https://github.com/your-username/quiz-project.git
+     ```
+
+   - Alternatively, download the ZIP file and extract its contents.
+
+2. **Navigate to the Project Directory:**
+   - Open a terminal or command prompt and change into the project directory:
+
+     ```bash
+     cd quiz-project
+     ```
+
+3. **Open the Quiz:**
+   - Locate the `index.html` file in the root directory.
+   - Open this file in your preferred web browser.
+
+4. **Start the Quiz:**
+   - On the quiz landing page, click the "Start Quiz" button to initiate the quiz.
+
+5. **Answer Questions:**
+   - For each question, select the answer you believe is correct.
+   - Receive immediate feedback on whether your answer is correct or incorrect.
+
+6. **Complete the Quiz:**
+   - Continue answering questions within the time limit.
+   - Once the quiz is complete, the application will prompt you to enter your initials.
+
+7. **Submit Your Score:**
+   - Enter your initials in the provided input field.
+   - Click the "Submit" button to save your high score.
+
+8. **View High Scores:**
+   - After submitting your score, you will be redirected to the high scores page (`highscores.html`).
+   - Here, you can see a list of high scores, including your own.
+
+9. **Explore Further:**
+   - Dive into the codebase to understand the quiz logic and explore opportunities for customization.
+   - Consider contributing to the project by opening issues or submitting pull requests.
+
+Enjoy the quiz and challenge yourself with coding-related questions!
 
 ## Features
 
@@ -129,10 +179,25 @@ Local storage was used to save and retrieve high scores. The user's initials and
 
 **Solution:** I ensured that the function was defined before being called. Placing the script tag for `logic.js` after the necessary HTML elements helped resolve this issue.
 
+## Credits
+
+- [Sound effects](#): Credits to [SoundBible](https://soundbible.com/) for providing free sound effects.
+
+## GitHub Repository
+
+- [GitHub Repository](https://github.com/ClaireFraser121/JavaQuiz2.0): Visit the project's repository for the latest updates and to contribute.
+
+## Live Demo
+
+- [Live Demo](https://clairefraser121.github.io/JavaQuiz2.0/): Check out the live demo of the quiz application.
+
+## Author
+
+- Claire Fraser
+
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
-
 
 ## Conclusion
 

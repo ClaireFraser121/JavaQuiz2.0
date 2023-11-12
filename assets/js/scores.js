@@ -1,10 +1,10 @@
 // Display High Scores on the "Highscores" Page
 function displayHighScores() {
     const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
-  
+
     const highScoresList = document.getElementById('highscores');
     highScoresList.innerHTML = '';
-  
+
     highScores.forEach((score, index) => {
         const listItem = document.createElement('li');
         listItem.textContent = `${index + 1}. ${score.initials} - ${score.score}`;
