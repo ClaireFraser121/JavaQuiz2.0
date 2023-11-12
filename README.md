@@ -174,7 +174,23 @@ Local storage was used to save and retrieve high scores. The user's initials and
 
 ## Credits
 
-- [Sound effects](#): Credits to [SoundBible](https://soundbible.com/) for providing free sound effects.
+- Loops and iteration
+  - Source: [mdn web docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration)
+
+- :scope
+  - Source: [mdn web docs](https://developer.mozilla.org/en-US/docs/Web/CSS/:scope)
+
+- setInterval() global function
+  - Source: [mdn web docs](https://developer.mozilla.org/en-US/docs/Web/API/setInterval)
+
+- clearInterval() global function
+  - Source: [mdn web docs](https://developer.mozilla.org/en-US/docs/Web/API/clearInterval)
+
+- Javascript setInterval()
+  - Source: [Programiz](https://www.programiz.com/javascript/setInterval)
+
+- JavaScript clearInterval()
+  - Source: [Programiz](https://www.programiz.com/javascript/setInterval)
 
 ## GitHub Repository
 
