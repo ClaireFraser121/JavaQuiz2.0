@@ -201,18 +201,18 @@ function displayHighScores() {
 // Store High Scores in Local Storage
 // a function to store high scores in local storage.
 function saveHighScore(initials, score) {
+  // Retrieve existing high scores from local storage, or initialize an empty array
   const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
 
+  // Create a new score object with initials and score
   const newScore = { initials, score };
+
+  // Add the new score to the array of high scores
   highScores.push(newScore);
 
-  // Sort high scores by score value (descending order)
+  // Sort high scores in descending order based on score value
   highScores.sort((a, b) => b.score - a.score);
 
-  // Save the high scores back to local storage
+  // Save the sorted high scores back to local storage
   localStorage.setItem('highScores', JSON.stringify(highScores));
 }
-
-
-
-
