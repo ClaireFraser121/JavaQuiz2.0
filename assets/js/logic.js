@@ -24,8 +24,7 @@ const endScreen = document.getElementById('end-screen');
 const finalScoreElement = document.getElementById('final-score');
 const correctSound = document.getElementById('correctSound');
 const incorrectSound = document.getElementById('incorrectSound');
-
-
+const highScoresList =document.getElementById('highscores'); 
 
 // Start Quiz Function
 // Implement a function to start the quiz when the "Start Quiz" button is clicked. This function should initialize the timer, display the first question, and hide the start screen.
@@ -51,7 +50,7 @@ function displayQuestion(questionIndex) {
   // Clear previous choices
   choicesContainer.innerHTML = '';
 
-  // Create buttons for answer choices
+// Create buttons for answer choices
   currentQuestion.choices.forEach(choice => {
     const choiceButton = document.createElement('button');
     choiceButton.textContent = choice;
@@ -83,12 +82,12 @@ function checkAnswer(event) {
     playIncorrectSound(); // Play the incorrect sound
   }
 
-  // Move to the next question
+// Move to the next question
   currentQuestionIndex++;
   if (currentQuestionIndex < quizQuestions.length) {
     displayQuestion(currentQuestionIndex);
   } else {
-    // Quiz is over
+// Quiz is over
     endQuiz();
   }
 }
@@ -111,7 +110,7 @@ function startTimer() {
 //   End Quiz Function
 // a function to handle the end of the quiz. Display the user's score and allow them to enter their initials and submit their score.
 function endQuiz() {
-  // Hide questions, display end screen
+// Hide questions, display end screen
   questionsContainer.style.display = 'none';
   endScreen.style.display = 'block';
   finalScoreElement.textContent = score;
@@ -154,24 +153,24 @@ function checkAnswer(event) {
   const currentQuestion = quizQuestions[currentQuestionIndex];
 
   if (selectedAnswer === currentQuestion.choices[currentQuestion.correctAnswer]) {
-    // Correct answer
+// Correct answer
     feedbackElement.textContent = 'Correct!';
     score += 10;
     playCorrectSound(); // Play the correct sound
   } else {
-    // Incorrect answer, penalize time
+// Incorrect answer, penalize time
     feedbackElement.textContent = 'Incorrect!';
     timeLeft -= 10;
     playIncorrectSound(); // Play the incorrect sound
   }
   console.log('correctSound')
 
-  // Move to the next question
+// Move to the next question
   currentQuestionIndex++;
   if (currentQuestionIndex < quizQuestions.length) {
     displayQuestion(currentQuestionIndex);
   } else {
-    // Quiz is over
+// Quiz is over
     endQuiz();
   }
 }
@@ -185,6 +184,19 @@ submitButton.addEventListener('click', function (event) {
   submitScore();
   window.location.assign("highscores.html")
 })
+
+// Function to display high scores
+function displayHighScores() {
+  const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
+  const highScoresList = document.getElementById('highscores');
+  highScoresList.innerHTML = '';
+
+  highScores.forEach((score, index) => {
+    const listItem = document.createElement('li');
+    listItem.textContent = `${index + 1}. ${score.initials} - ${score.score}`;
+    highScoresList.appendChild(listItem);
+  });
+}
 
 // Store High Scores in Local Storage
 // a function to store high scores in local storage.
