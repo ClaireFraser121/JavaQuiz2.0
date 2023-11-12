@@ -94,7 +94,7 @@ The project is structured as follows:
 - **`questions.js`**: JavaScript file containing an array of quiz questions.
 - **`logic.js`**: The main JavaScript file containing the quiz logic, event listeners, and functions for high scores.
 
-![Project Structure](/javaQuiz2.0/assets/images/file-stucture-screenshot.png)
+![Project Structure](./assets/images/file-stucture-screenshot.png)
 
 ## Quiz Logic
 
@@ -110,19 +110,19 @@ The quiz logic involves the following components:
 
 - **Ending the Quiz**: The `endQuiz` function hides the questions, displays the final score, and allows users to submit their initials.
 
-![Quiz Logic](/javaQuiz2.0/assets/images/quiz-logic-screenshot%20.png)
+![Quiz Logic](./assets/images/quiz-logic-screenshot%20.png)
 
 ## Local Storage
 
 Local storage is used to store and retrieve high scores. The `saveHighScore` function saves scores to local storage, and the `displayHighScores` function retrieves and displays them.
 
-![Local Storage](/javaQuiz2.0/assets/images/local-storage-sh.png)
+![Local Storage](./assets/images/local-storage-sh.png)
 
 ## Sound Effects
 
 The project includes sound effects for correct and incorrect answers. The `playCorrectSound` and `playIncorrectSound` functions play audio when the user responds to a question.
 
-![Sound Effects](/javaQuiz2.0/assets/images/sfx-screenshot%20(10).png)
+![Sound Effects](./assets/images/sfx-screenshot%20(10).png)
 
 ## Development Process
 
@@ -183,6 +183,7 @@ Local storage was used to save and retrieve high scores. The user's initials and
 ## Live Demo
 
 - [Live Demo](https://clairefraser121.github.io/JavaQuiz2.0/): Check out the live demo of the quiz application.
+![Live Demo Screenshot](./assets/images/liveDemo.png)
 
 ## Author
 
