@@ -10,7 +10,6 @@ As a coding boot camp student, I was tasked with building a timed coding quiz wi
 - [Features](#features)
 - [Project Structure](#project-structure)
 - [Quiz Logic](#quiz-logic)
-- [API Integration](#api-integration)
 - [Local Storage](#local-storage)
 - [Sound Effects](#sound-effects)
 - [Development Process](#development-process)
@@ -95,7 +94,7 @@ The project is structured as follows:
 - **`questions.js`**: JavaScript file containing an array of quiz questions.
 - **`logic.js`**: The main JavaScript file containing the quiz logic, event listeners, and functions for high scores.
 
-![Project Structure](/path/to/project-structure-screenshot.png)
+![Project Structure](/javaQuiz2.0/assets/images/file-stucture-screenshot.png)
 
 ## Quiz Logic
 
@@ -111,13 +110,7 @@ The quiz logic involves the following components:
 
 - **Ending the Quiz**: The `endQuiz` function hides the questions, displays the final score, and allows users to submit their initials.
 
-![Quiz Logic](/path/to/quiz-logic-screenshot.png)
-
-## API Integration
-
-The project does not currently integrate any external APIs. However, you can extend it by fetching questions from an API for a more dynamic quiz experience.
-
-![API Integration](/path/to/api-integration-screenshot.png)
+![Quiz Logic](/javaQuiz2.0/assets/images/quiz-logic-screenshot%20.png)
 
 ## Local Storage
 
