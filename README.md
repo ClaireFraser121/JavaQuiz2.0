@@ -116,13 +116,13 @@ The quiz logic involves the following components:
 
 Local storage is used to store and retrieve high scores. The `saveHighScore` function saves scores to local storage, and the `displayHighScores` function retrieves and displays them.
 
-![Local Storage](/path/to/local-storage-screenshot.png)
+![Local Storage](/javaQuiz2.0/assets/images/local-storage-sh.png)
 
 ## Sound Effects
 
 The project includes sound effects for correct and incorrect answers. The `playCorrectSound` and `playIncorrectSound` functions play audio when the user responds to a question.
 
-![Sound Effects](/path/to/sound-effects-screenshot.png)
+![Sound Effects](/javaQuiz2.0/assets/images/sfx-screenshot%20(10).png)
 
 ## Development Process
 
