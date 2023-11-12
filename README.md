@@ -183,6 +183,7 @@ Local storage was used to save and retrieve high scores. The user's initials and
 ## Live Demo
 
 - [Live Demo](https://clairefraser121.github.io/JavaQuiz2.0/): Check out the live demo of the quiz application.
+
 ![Live Demo Screenshot](./assets/images/liveDemo.png)
 
 ## Author
